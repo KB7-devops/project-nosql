@@ -37,7 +37,7 @@ MongoClient.connect("mongodb://localhost:27017/movies", function(err, db) {
 //insertion
 
  collection.insertOne(  {
-    "_id" : ObjectId("58c662e2f140cb477d088888"),
+    "_id" : MongoClient("58c662e2f140cb477d088888"),
     "fields" : {
         "directors" : [ 
             "Melvin ADJEI"
@@ -65,7 +65,7 @@ MongoClient.connect("mongodb://localhost:27017/movies", function(err, db) {
 
 
 collection.insertOne(  {
-    "_id" : ObjectId("6gb897bgb8sdfvkjkj"),
+    "_id" : MongoClient("6gb897bgb8sdfvkjkj"),
     "fields" : {
         "directors" : [ 
             "Karim BENMOUSSA"
@@ -95,13 +95,7 @@ var match = {"fields.title":"NOM DU FILM RECHERCHE"};
 var project = {"fields.title": 1, "fields.plot":1,"fields.year":1,"fields.rating":1};
 db.collection.find(match,project);
 
-match = {"fields.rating":{$gt:NOTE RENTREE}};
-project = {"fields.title": 1, "fields.plot":1,"fields.year":1,"fields.rating":1};
-db.collection.find(match,project);
-
-match = {"fields.plot" : {$regex: "MOT RENTRE PAR LUTILISATUER", $options : "i"}};
-project = {"fields.title": 1, "fields.plot":1,"fields.year":1,"fields.rating":1};
-db.collection.find(match,project);
+ 
 
 });
 
