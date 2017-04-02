@@ -1,16 +1,16 @@
-#Installation
+##Installation
 
 npm install
 
 
-#Launch the project
+##Launch the project
 
 node server.js
 
 then, in the browser go to localhost:8087
 
 
-#About the project
+##About the project
 
 We chose to work with mongoDB.
 
