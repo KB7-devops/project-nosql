@@ -94,9 +94,15 @@ collection.insertOne(  {
 var match = {"fields.title":"NOM DU FILM RECHERCHE"};
 var project = {"fields.title": 1, "fields.plot":1,"fields.year":1,"fields.rating":1};
 db.collection.find(match,project);
+ /*
+var match2 = {"fields.rating":{"$gt:NOTE RENTREE"}};
+project = {"fields.title": 1, "fields.plot":1,"fields.year":1,"fields.rating":1};
+db.collection.find(match2,project);
 
- 
-
+var match3 = {"fields.plot" : {$regex: "MOT RENTRE PAR LUTILISATUER", $options : "i"}};
+project = {"fields.title": 1, "fields.plot":1,"fields.year":1,"fields.rating":1};
+db.collection.find(match3,project);
+*/
 });
 
 
